@@ -17,8 +17,8 @@
 def cakes(recipe, available):
     count = []
     
-    for key in recipe.keys():
-        if key not in available.keys():
+    for key in recipe:
+        if key not in available:
             return 0
         count.append(available[key] // recipe[key])
     return min(count)
